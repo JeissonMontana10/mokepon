@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap');
 
-body{
+body {
     font-family: "Pixelify Sans", sans-serif;
-    background-image: url("assets/fondo.jpg");
+    background-image: url("/mokepon/assets/33115.jpg");
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center; /* Centra la imagen en el fondo */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    z-index: -1; /* Asegura que la imagen esté detrás del contenido */    
+    z-index: -1; /* Asegura que la imagen esté detrás del contenido */
 }
 
-#seleccionar-mascota{
+#seleccionar-mascota {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,107 +17,131 @@ body{
 }
 
 .titulo {
-    color: #03045e;
+    color: #f60000; /* Color blanco para el título */
     font-size: 80px;
-    
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Agregué sombra para mayor legibilidad */
 }
 
-.subtitulo{
-    color: #03045e;
+.subtitulo {
+    color: #ff0000; /* Color azul oscuro */
     font-size: 30px;
-    background-color: rgb(189, 224, 254, 0.7);
-    border: 1px solid black;
+    background-color: rgba(242, 255, 4, 0.963); /* Fondo con un toque más suave */
+    border: 2px solid #03045e; /* Borde azul más intenso */
     border-radius: 20px;
     width: 280px;
     padding-left: 10px;
+    padding-right: 10px; /* Añadí un poco de relleno en el lado derecho */
 }
 
-.tarjetas{
+.tarjetas {
     display: flex;
     gap: 10px;
 }
 
-.tarjeta-de-mokepon{
-    box-sizing: border-box; /*Mantiene las dimensiones de la Caja */
+.tarjeta-de-mokepon {
+    box-sizing: border-box; /* Mantiene las dimensiones de la caja */
     width: 300px;
-    height: 300px;
-    background: rgb(189, 224, 254, 0.7);
+    height: 400px;
+    background: rgba(255, 242, 0, 0.824); /* Fondo blanco semitransparente */
     padding: 10px;
-    border: 1px solid black;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #03045e;
+    color: #03045e; /* Color del texto de las tarjetas */
     flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra para agregar profundidad */
 }
 
-.tarjeta-de-mokepon img{
+.tarjeta-de-mokepon img {
     width: 200px;
     border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra en las imágenes para darles más enfoque */
 }
 
-.tarjeta-de-mokepon p{
+.tarjeta-de-mokepon p {
     font-size: 25px;
+    font-weight: bold;
+    text-align: center; /* Alineación central del texto */
 }
 
-input{
+input {
     display: none;
 }
 
-#boton-mascota{
+#boton-mascota {
     box-sizing: border-box;
     width: 130px;
     height: 40px;
-    background-color: chartreuse;
-    border: 2px solid black;
+    background-color: #fff309; /* Verde limón vibrante */
+    border: 2px solid #03045e;
     border-radius: 20px;
     padding: 10px;
     margin: 10px;
     font-size: 20px;
+    cursor: pointer; /* Añadí el cursor pointer para indicar clic */
+    transition: background-color 0.3s ease; /* Transición de color al pasar el ratón */
 }
 
-#seleccionar-ataque{
+#boton-mascota:hover {
+    background-color: #7BBF00; /* Cambio de color al pasar el ratón */
+}
+
+#seleccionar-ataque {
     flex-direction: column;
     align-items: center;
 }
 
-.boton-ataque{
-    background-color: chartreuse;
+.boton-ataque {
+    background-color: #A4D300; /* Verde limón */
     padding: 10px;
     box-sizing: border-box;
     border-radius: 20px;
     width: 120px;
     font-size: 20px;
+    cursor: pointer; /* Añadí el cursor pointer */
+    transition: background-color 0.3s ease;
 }
 
-#resultado{
+.boton-ataque:hover {
+    background-color: #7BBF00; /* Cambio de color al pasar el ratón */
+}
+
+#resultado {
     width: 200px;
-    background-color: rgb(189, 224, 254, 0.7);
+    background-color: rgba(189, 224, 254, 0.8); /* Fondo suave para los mensajes */
     padding: 20px;
     margin-top: 20px;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     font-size: 20px;
-    color: #03045e;
+    color: #03045e; /* Texto azul oscuro */
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave para el resultado */
 }
 
-#boton-reiniciar{
+#boton-reiniciar {
     box-sizing: border-box;
     width: 130px;
     height: 40px;
-    background-color: chartreuse;
-    border: 2px solid black;
+    background-color: #FF4500; /* Naranja brillante */
+    border: 2px solid #03045e;
     border-radius: 20px;
     padding: 10px;
     margin: 10px;
     font-size: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.ataques{
+#boton-reiniciar:hover {
+    background-color: #FF6347; /* Cambio de color al pasar el ratón */
+}
+
+.ataques {
     display: grid;
     grid-template-columns: 100px 100px;
     text-align: center;
-    text-align: center;
+    gap: 20px; /* Añadí un espacio entre las columnas de los ataques */
 }
